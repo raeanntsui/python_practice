@@ -1,5 +1,5 @@
 # Which year do you want to check?
-year = int(input())
+year = int(input("Input your year here: "))
 # 🚨 Don't change the code above 👆
 
 # Write your code below this line 👇
