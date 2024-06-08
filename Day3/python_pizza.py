@@ -33,4 +33,4 @@ if valid:
 
     print(f"Your final bill is: ${bill}.")
 else:
-    print("Please be sure you are typing S, M, or L only! Restart.b")
+    print("Please be sure you are typing S, M, or L only! Restart.")
