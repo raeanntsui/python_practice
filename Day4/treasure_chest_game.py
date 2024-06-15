@@ -9,7 +9,8 @@ if first_choice == "left":
             fourth_choice = input("You accept the bean and plant it. Do you climb the stalk? Please type 'yes' or 'no'.\n")
             if fourth_choice == 'yes':
                 print("Congratulations! You found the treasure! It was at the top of the magic beanstalk! And its a minion :)")
-                print("""⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⠤⠴⠦⠤⣤⣄⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                print("""
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣤⠤⠴⠦⠤⣤⣄⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⠖⠋⠉⠀⠀⠀⠀⣠⣾⣿⣯⣿⣿⣿⣭⡙⢶⣄⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠖⣋⡤⢒⣤⣤⢭⣄⣠⡴⢣⣿⣿⡟⠉⠀⠀⠈⠙⢦⢿⣦⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡞⢁⡴⣹⣿⣿⡿⠿⠿⢶⣌⠛⢿⣿⡏⢠⣾⣿⣦⠀⠀⠈⣿⣿⡀⠀⠀⠀⠀
@@ -26,11 +27,12 @@ if first_choice == "left":
 ⠀⠀⠙⠿⢿⣧⣿⣿⣿⣿⣿⣽⣦⣀⣀⠀⠀⣿⡀⠀⠀⠀⠸⠀⠀⠐⠂⢀⠀⢙⣿⠿⣿⣿⣿⣿⣿⣿⣿⠿⠋
 ⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣏⡙⢛⡿⠋⠙⠂⠀⠄⠀⠳⠶⠤⢤⣤⣤⠿⢿⣤⣽⠿⣿⣿⣿⣿⠁⠀⠀
 ⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣯⠉⠁⠀⢀⠀⠑⠀⠈⠓⠰⠂⠀⠠⠦⠦⠀⢀⣤⠾⣟⣿⣿⡟⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⠿⣿⣿⣿⢿⣟⠀⠀⠀⠀⠙⠻⢶⣤⣤⡄⢰⡄⠀⢶⣴⠟⣷⡀⢚⣿⡟⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⠿⣿⣿⣿⢿⣟⠀⠀⠀⠀⠙⠻⢶⣤⣤⡄⢰⡄⠀⢶⣴⠟⣷⡀⢚⣿⡟⠀⠀⠀⠀   
 ⠀⠀⠀⠀⠀⠀⠀⠻⠿⠏⠀⠻⢿⠿⠇⠈⠉⠛⢶⣶⣿⣧⣤⣤⣽⣧⣄⣤⣤⣤⣴⣦⡭⠶⠛⠉⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⡇⠀⣿⣿⣿⣿⣿⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⡿⠁⠀⢿⣿⣿⣿⣅⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠿⠿⠿⠿⠃⠀⠀⠻⠿⠿⠿⠿⠗⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀""")
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠿⠿⠿⠿⠃⠀⠀⠻⠿⠿⠿⠿⠗⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀
+            """)
             else: 
                 print("The wizard is disappointed that you didn't accept his gift. You are vaporized immediately. Game over.")
         else: 
