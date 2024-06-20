@@ -36,7 +36,9 @@ for chosen_number in range(1, int_number_count + 1):
         break
     else: password_numbers.append(random.choice(numbers))
 
-new_password = "".join(password_letters) + "".join(password_symbols) + "".join(password_numbers)
+# new_password = "".join(password_letters) + "".join(password_symbols) + "".join(password_numbers)
+new_password = "".join(password_letters + password_symbols + password_numbers)
 print(f'New password is {new_password}')
 
-print("Here is a shuffled version of your password:")
+# print("Here is a shuffled version of your password:")
+test
