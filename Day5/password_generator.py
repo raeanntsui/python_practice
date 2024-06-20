@@ -38,7 +38,8 @@ for chosen_number in range(1, int_number_count + 1):
 
 # new_password = "".join(password_letters) + "".join(password_symbols) + "".join(password_numbers)
 new_password = "".join(password_letters + password_symbols + password_numbers)
-print(f'New password is {new_password}')
+print(f'New (unshuffled) password is {new_password}')
 
-# print("Here is a shuffled version of your password:")
-test
+shuffled_password = list(new_password)
+new_list = random.sample(shuffled_password, len(shuffled_password))
+print(f"Your newly shuffled password is: {''.join(new_list)}")
