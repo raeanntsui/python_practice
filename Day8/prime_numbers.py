@@ -1,6 +1,6 @@
 def prime_checker(number):
     is_a_prime_number = True
-    for i in range(1, number + 1):
+    for i in range(2, number):
         if number % i == 0:
             is_a_prime_number = False
     if is_a_prime_number:
