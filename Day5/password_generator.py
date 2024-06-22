@@ -8,8 +8,6 @@ letter_count = (input("How many alphabet letters would you like in your password
 symbol_count = input("How many symbols would you like in your password?\n")
 number_count = input("How many numbers would you like in your password?\n")
 
-
-
 int_letter_count = int(letter_count)
 int_symbol_count = int(symbol_count)
 int_number_count = int(number_count)
