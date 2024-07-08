@@ -29,6 +29,7 @@ If there are lives left (lives > 0), then prompt the user for guesses!
 
 LOOP:
 if lives > 0:
+    populate the guess_tracker here
     ask the player for a guess
     if guess is correct aka guess matches one of the letters in winning_word:
         guess_tracker will update the underscores in place of the correct guess
@@ -41,23 +42,31 @@ if lives == 0:
 
 """
 lives = 5
-words_list = ["hello", "raeann", "yoyo", "potato", "tomato", "smiski", "sonny"]
-hangman_word = random.choice(words_list) # pick a random word from the given list of words in "words_list"
+words_list = ["hello"]
+winning_word = random.choice(words_list) # pick a random word from the given list of words in "words_list"
+past_guesses = []
+guess_tracker = len(winning_word) * ["_"]
+print(f"Word to guess = {guess_tracker}")
+# print(winning_word)
 
-print(hangman_word)
-new_hangman_word = "_" * len(hangman_word)
-# print(new_hangman_word)
-guess = input("Please enter your guess! Enter one letter only please :)\n")
+while lives > 0:
+    print(f"You currently have {lives} lives left.")
+    guess = input("Please enter your guess! If you want to go ahead and guess the whole word, please enter: 'Guess now'.\n")
+    if guess == 'guess now':
+        guess_now = input("Take your guess now!\n")
+        if guess_now == winning_word:
+            print("Congratulations! You win the game!")
+            break
+    if guess in winning_word:
+        print("You got one!")
+        for index, letter in enumerate(winning_word):
+            if guess == letter:
+                guess_tracker[index] = guess
+                print(f"Guess tracker: {guess_tracker}")
+    elif not guess in winning_word:
+        print(f"There is no {guess}... try again.")
+        lives -= 1
+        print(f"Guess tracker: {guess_tracker}")
 
-new_hangman_word_list = list(new_hangman_word)
-# print("new hangman word is", new_hangman_word_list)
-
-for idx, letter in enumerate(hangman_word): # print the placeholders for the length of the hangman_word
-    if letter == guess:
-        print(letter)
-        hangman_word[idx] = guess
-    else:
-        print("_", end="")
-print()
-new_hangman_word = "".join(new_hangman_word_list)
-print(new_hangman_word)
+if lives == 0:
+    print(f"Game over! The winning word was {winning_word}.")                  
