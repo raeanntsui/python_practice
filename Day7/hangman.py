@@ -42,31 +42,35 @@ if lives == 0:
 
 """
 lives = 5
-words_list = ["hello"]
+words_list = ["hello", "paradise", "parade", "random", "python"]
 winning_word = random.choice(words_list) # pick a random word from the given list of words in "words_list"
 past_guesses = []
 guess_tracker = len(winning_word) * ["_"]
-print(f"Word to guess = {guess_tracker}")
+print(f"Word to guess = {' '.join(guess_tracker)}")
 # print(winning_word)
 
 while lives > 0:
-    print(f"You currently have {lives} lives left.")
-    guess = input("Please enter your guess! If you want to go ahead and guess the whole word, please enter: 'Guess now'.\n")
+    print(f"You currently have {lives} lives.")
+    guess = input("Please enter your guess! If you want to go ahead and guess the whole word, please type exactly: 'guess now'.\n")
     if guess == 'guess now':
         guess_now = input("Take your guess now!\n")
         if guess_now == winning_word:
             print("Congratulations! You win the game!")
             break
+        else:
+            lives -= 1
+            print("Please try again! That was not the correct word :(")
+            continue
     if guess in winning_word:
         print("You got one!")
         for index, letter in enumerate(winning_word):
             if guess == letter:
                 guess_tracker[index] = guess
-                print(f"Guess tracker: {guess_tracker}")
+                print(f"Guess tracker: {' '.join(guess_tracker)}")
     elif not guess in winning_word:
-        print(f"There is no {guess}... try again.")
+        print(f"There is no '{guess}'... try again.")
         lives -= 1
-        print(f"Guess tracker: {guess_tracker}")
+        print(f"Guess tracker: {' '.join(guess_tracker)}")
 
 if lives == 0:
-    print(f"Game over! The winning word was {winning_word}.")                  
+    print(f"Game over! The winning word was '{winning_word}'.")                  
