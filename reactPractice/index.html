@@ -18,8 +18,20 @@
           </div>
         )
       }
+
+      function List() {
+        const names = ["Raeann", "K", "Maddie"]
+        return (
+          <div>
+            <ol>
+            {names.map( name => <li>{name}</li>)}
+            </ol>
+          </div>
+        )
+      }
       const root = ReactDOM.createRoot(app);
       root.render(<Header title="Hello"/>);
+      root.render(<List />)
     </script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </body>
